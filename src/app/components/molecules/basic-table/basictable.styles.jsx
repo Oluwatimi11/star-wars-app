@@ -6,8 +6,8 @@ export const TableDiv = styled.table`
   min-width: 70%;
   margin: 5rem 15%;
   align-items: center;
-  animation: scrollTable 50s linear .1s;
-  position: absolute;
+  // animation: scrollTable 50s linear .1s;
+  // position: absolute;
   top: 10%;
   
 
@@ -62,4 +62,18 @@ export const TableRow = styled.tr`
 export const TableData = styled.td`
   border: 1px solid #777;
   padding: 8px;
+`;
+
+export const FilterSpan = styled.span`
+  margin-right: .5rem;
+`;
+
+export const DelayedNotification = styled.div`
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  color: gold;
+  text-transform: uppercase;
+  margin-top: 30%;
+  margin-left: 20rem;
 `;

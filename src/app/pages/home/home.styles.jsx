@@ -10,7 +10,7 @@ export const Stars = styled.div`
   .star {
     position: absolute;
     width: 1px;
-    height: 1px;
+    min-height: 100vh;
     background-color: white;
   }
 `;

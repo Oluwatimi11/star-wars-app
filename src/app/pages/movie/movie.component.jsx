@@ -4,13 +4,14 @@ import { useFetch } from "../../../useFetch";
 import { useParams } from 'react-router-dom';
 import BackArrow from "../../components/atoms/back-arrow/back-arrow.component";
 
-function Movie({handleReturn}) {
+function Movie({handleReturn}) { 
   
   let { id } = useParams();
-  const movieList = useFetch(`https://swapi.dev/api/films/${id}`) 
+  const {movieList, showLoading } = useFetch(`https://swapi.dev/api/films/${id}`) 
   return (
     <MovieContainer>
             <BackArrow handleReturn={handleReturn} />
+            {showLoading ?<>
       <MovieBoard id="board">
         <MovieContent id="content">
           <MovieTitle id="title">Episode {movieList.episode_id}</MovieTitle>
@@ -23,7 +24,8 @@ function Movie({handleReturn}) {
       </MovieBoard>
       <MovieTable>
         <BasicTable movieList={movieList.characters} />
-      </MovieTable>
+      </MovieTable></>:<div>Loading...</div>
+}
     </MovieContainer>
   );
 }

@@ -1,4 +1,5 @@
 import { BiArrowBack } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import styled from "styled-components/macro";
 
 export const Wrapper = styled.div`
@@ -12,12 +13,20 @@ export const Wrapper = styled.div`
   margin: 1rem;
 `;
 
-const BackArrow = ({ handleReturn }) => {
+export const ArrowLink = styled(Link)`
+  list-style-item: none;
+  color: #fff;
+  text-decoration:none;
+`;
+
+const BackArrow = () => {
   return (
-    <Wrapper onClick={handleReturn}>
-      <BiArrowBack size={24} />
-      Go Back
-    </Wrapper>
+    <ArrowLink to="/">
+      <Wrapper>
+        <BiArrowBack size={24} />
+        Go Back
+      </Wrapper>
+    </ArrowLink>
   );
 };
 

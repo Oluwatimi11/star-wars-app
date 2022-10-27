@@ -1,4 +1,3 @@
-import { Stars } from "./app/pages/home/home.styles";
 
 // Sets the number of stars we wish to display
 const numStars = 100;
@@ -21,3 +20,5 @@ function getRandomPosition() {
   var randomY = Math.floor(Math.random()*y);
   return [randomX,randomY];
 }
+
+module.exports={getRandomPosition}
