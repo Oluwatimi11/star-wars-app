@@ -6,7 +6,7 @@ export const TableDiv = styled.table`
   min-width: 70%;
   margin: 5rem 15%;
   align-items: center;
-  animation: scrollTable 50s linear .1s;
+  animation: scrollTable 50s linear .2s;
   position: absolute;
   top: 10%;
   
